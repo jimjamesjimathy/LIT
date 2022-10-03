@@ -6,25 +6,34 @@ import './Navbar.scss';
 
 const Navbar = () => {
   const [mobile, setMobile] = useState(false);
+  const [scroll, setScroll] = useState(true);
 
+  window.addEventListener('scroll', function() {
+    if(this.scrollY > 950) {
+      setScroll(false);
+    } else {
+      setScroll(true);
+    }
+  })
 
   const handleNav = () => {
     setMobile(!mobile);
   }
 
+
   return (
     <div className='Navbar'>
-      <div className="navBG" />
+      <div className={scroll ? 'navBG' : 'navScroll'} />
       <div className="nav-wrap">
         <div className="logo">
-          <p>LOGO</p>
+          <p>LIT</p>
         </div>
         <div className="links">
           <a href="#home">Home</a>
           <a href="#about">About</a>
-          <a href="">Menu</a>
-          <a href="">Booking</a>
-          <a href="">Contact</a>
+          <a href="/">Menu</a>
+          <a href="/">Booking</a>
+          <a href="/">Contact</a>
         </div>
         <div className="mobile-menu">
           <button onClick={handleNav}>
@@ -36,11 +45,11 @@ const Navbar = () => {
         <button onClick={handleNav}>
         <GrClose size={40} className='hamburger' />
         </button>
-        <a href="">Home</a>
-        <a href="">About</a>
-        <a href="">Menu</a>
-        <a href="">Booking</a>
-        <a href="">Contact</a>
+        <a href="/">Home</a>
+        <a href="/">About</a>
+        <a href="/">Menu</a>
+        <a href="/">Booking</a>
+        <a href="/">Contact</a>
       </div>
     </div>
   )

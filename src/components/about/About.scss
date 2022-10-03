@@ -1,5 +1,80 @@
 .About {
-    background-color: dodgerblue;
+    background-color: #81B29A;
     height: 100%;
     width: 100%;
+
+    .about-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        column-gap: 50px;
+
+        .about-title {
+            height: 15em;
+            width: 75em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .title-wrap {
+                width: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-bottom: 3px solid #F2CC8F;
+
+                :nth-child(1) {
+                    margin-right: 10px;
+
+                }
+
+                :nth-child(2) {
+                    margin-left: 10px;
+                }
+
+                h2 {
+                    font-size: 3rem;
+                    font-weight: 400;
+                    padding-bottom: 25px;
+                    color: #3D405B;
+                }
+            }
+        }
+
+        .about-left,
+        .about-right {
+            height: 40em;
+            width: 45%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            border: 3px solid #F2CC8F;
+            border-radius: 5px;
+
+            img {
+                width: 70%;
+                margin: auto;
+            }
+
+            .left-title {
+                border-bottom: 1px solid #3D405B;
+                width: 75%;
+                margin: 0 auto;
+            }
+
+            h2 {
+                font-size: 3rem;
+                font-weight: 400;
+                color: #3D405B;
+                padding-bottom: 25px;
+            }
+
+            p {
+                font-size: 1.5rem;
+                padding: 0 3%;
+            }
+        }
+    }
 }
